@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-to-Speech Full Article</title>
+</head>
+<body>
+    <h1>Text-to-Speech Full Article</h1>
+    <p>Click the button below to read the full article:</p>
+    <button id="read-article-button">Read Full Article</button>
+
+    <article id="full-article">
+        <!-- Your full article content goes here -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p>...</p>
+    </article>
+
+    <script>
+        // Check for browser support
+        if ('speechSynthesis' in window) {
+            const readArticleButton = document.getElementById('read-article-button');
+            const fullArticle = document.getElementById('full-article');
+            
+            const synth = window.speechSynthesis;
+
+            readArticleButton.addEventListener('click', () => {
+                const articleText = fullArticle.textContent;
+                if (articleText !== '') {
+                    const utterance = new SpeechSynthesisUtterance(articleText);
+                    synth.speak(utterance);
+                }
+            });
+        } else {
+            // Browser doesn't support the Web Speech API
+            alert('Sorry, your browser does not support text-to-speech.');
+        }
+    </script>
+</body>
+</html>
