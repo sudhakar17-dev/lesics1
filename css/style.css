@@ -33,7 +33,7 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -189,8 +189,7 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #012970;
-  font-family: "Nunito", sans-serif;
+  color: #012970; 
   margin-top: 3px;
 }
 
@@ -221,8 +220,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
-  font-family: "Nunito", sans-serif;
+  padding: 10px 0 10px 30px;  
   font-size: 16px;
   font-weight: 700;
   color: #013289;
@@ -495,7 +493,6 @@ section {
 }
 
 .hero .btn-get-started span {
-  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -558,6 +555,7 @@ section {
 /*--------------------------------------------------------------
 # Index Page
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -594,8 +592,7 @@ section {
   box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
 }
 
-.about .btn-read-more span {
-  font-family: "Nunito", sans-serif;
+.about .btn-read-more span { 
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -611,6 +608,21 @@ section {
   transform: translateX(5px);
 }
 
+@media (max-width: 768px) {
+  .about {
+    text-align: left;
+    padding: 20px 0;
+  }
+
+  .about h2 {
+    font-size: 20px;
+  }
+
+  .about .btn-read-more span {
+    letter-spacing: -1px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Values
 --------------------------------------------------------------*/
@@ -622,7 +634,7 @@ section {
   height: 100%;
 }
 
-.values .box p{
+.values .box p {
   text-align: left;
 }
 
@@ -645,6 +657,96 @@ section {
 
 .values .box:hover img {
   transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .values {
+    padding: 20px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Animation Page
+--------------------------------------------------------------*/
+.animation .box {
+  padding: 30px;
+  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.animation .box p {
+  text-align: left;
+}
+
+.animation .box img {
+  padding: 15px 10px;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.animation .box h3 {
+  font-size: 24px;
+  color: #012970;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.animation .box:hover {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+
+.animation .box:hover img {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .animation {
+    padding: 20px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Development Page
+--------------------------------------------------------------*/
+.development .box {
+  padding: 30px;
+  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.development .box p {
+  text-align: left;
+}
+
+.development .box img {
+  padding: 15px 10px;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.development .box h3 {
+  font-size: 24px;
+  color: #012970;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.development .box:hover {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+
+.development .box:hover img {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .development {
+    padding: 20px 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -679,9 +781,14 @@ section {
 
 .counts .count-box p {
   padding: 0;
-  margin: 0;
-  font-family: "Nunito", sans-serif;
+  margin: 0;  
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .counts {
+    padding: 20px 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -730,6 +837,10 @@ section {
 @media (max-width: 768px) {
   .features .feture-tabs h3 {
     font-size: 28px;
+  }
+
+  .features {
+    padding: 20px 0;
   }
 }
 
@@ -964,6 +1075,12 @@ section {
   background: #fff;
 }
 
+@media (max-width: 768px) {
+  .services {
+    padding: 20px 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
@@ -992,8 +1109,7 @@ section {
 .pricing .price {
   font-size: 36px;
   color: #444444;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
+  font-weight: 600;  
 }
 
 .pricing .price sup {
@@ -1038,8 +1154,7 @@ section {
   color: #4154f1;
   transition: none;
   font-size: 16px;
-  font-weight: 400;
-  font-family: "Nunito", sans-serif;
+  font-weight: 400; 
   font-weight: 600;
   transition: 0.3s;
   border: 1px solid #4154f1;
@@ -1548,6 +1663,12 @@ section {
   background-color: #4154f1;
 }
 
+@media (max-width: 768px) {
+  .clients {
+    padding: 20px 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Recent Blog Posts
 --------------------------------------------------------------*/
@@ -1610,6 +1731,16 @@ section {
 
 .recent-blog-posts .post-box:hover .post-img img {
   transform: rotate(6deg) scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .recent-blog-posts {
+    padding: 20px 0;
+  }
+
+  .col-lg-4 {
+    padding-bottom: 15px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2336,15 +2467,13 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   color: #012970;
-  font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
 
 .footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Nunito", sans-serif;
+  margin-bottom: 0; 
 }
 
 .footer .footer-top .social-links a {
@@ -2466,8 +2595,7 @@ section {
   top: 0;
   font-size: 14px;
   background: aliceblue;
-  color: aliceblue;
-  font-family: "Nunito", sans-serif;
+  color: aliceblue;  
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -2561,11 +2689,19 @@ section {
   color: aliceblue;
 }
 
+iframe {
+  width: 351px;
+  height: 202px;
+  margin: -1px 0 0 -21px; 
+}
+
 @media (max-width: 767px) {
   .share-icons {
     padding: 0px 30px 0px 30px;
     flex-wrap: wrap;
-  } 
+    margin: 0px 0px 0px 30px;
+  }
+
   .wrapper a {
     margin: 6px 10px 6px 6px;
   }
