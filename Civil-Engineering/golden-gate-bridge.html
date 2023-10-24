@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Lesics Engineers Pvt Ltd</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../img/download.png" rel="icon">
+    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../vendor/aos/aos.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        #read-article-button {
+            font-family: "Nunito", sans-serif;
+            background: #4154f1;
+            padding: 8px 8px;
+            margin-left: 20px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+        }
+
+        #stop-button {
+            font-family: "Nunito", sans-serif;
+            background: #4154f1;
+            padding: 8px 8px;
+            margin-left: 15px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+        }
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+
+        .share-icons {
+            border-radius: 4px;
+            color: #fff;
+            display: flex;
+            padding-top: 10px;
+        }
+
+        .share-icons p {
+            background: #4154f1;
+            width: fit-content;
+            padding: 16px 10px;
+            border-radius: 5px;
+            height: 60px;
+        }
+
+        .wrapper {
+            display: contents;
+        }
+
+        .wrapper a {
+            margin-left: 15px;
+        }
+
+        .wrapper .icon {
+            position: relative;
+            background: aliceblue;
+            color: rgb(0, 0, 15);
+            border-radius: 50%;
+            margin: 1px;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .tooltip {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            background: aliceblue;
+            color: aliceblue;
+            font-family: "Poppins", sans-serif;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: aliceblue;
+            top: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .icon:hover .tooltip {
+            top: 60px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .wrapper .icon:hover span,
+        .wrapper .icon:hover .tooltip {
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrapper .linkedin:hover,
+        .wrapper .linkedin:hover .tooltip,
+        .wrapper .linkedin:hover .tooltip::before {
+            background: #0077b5;
+            color: aliceblue;
+        }
+
+        .wrapper .facebook:hover,
+        .wrapper .facebook:hover .tooltip,
+        .wrapper .facebook:hover .tooltip::before {
+            background: #4267b2;
+            color: aliceblue;
+        }
+
+        .wrapper .whatsapp:hover,
+        .wrapper .whatsapp:hover .tooltip,
+        .wrapper .whatsapp:hover .tooltip::before {
+            background: #25D366;
+            color: aliceblue;
+        }
+
+        .wrapper .youtube:hover,
+        .wrapper .youtube:hover .tooltip,
+        .wrapper .youtube:hover .tooltip::before {
+            background: #f00000;
+            color: aliceblue;
+        }
+
+        .wrapper .twitter:hover,
+        .wrapper .twitter:hover .tooltip,
+        .wrapper .twitter:hover .tooltip::before {
+            background: #1da1f2;
+            color: aliceblue;
+        }
+
+        .wrapper .instagram:hover,
+        .wrapper .instagram:hover .tooltip,
+        .wrapper .instagram:hover .tooltip::before {
+            background: radial-gradient(circle at 30% 107%,
+                    #fdf497 0%,
+                    #fdf497 5%,
+                    #fd5949 45%,
+                    #d6249f 60%,
+                    #285aeb 90%);
+            color: aliceblue;
+        }
+
+        .wrapper .github:hover,
+        .wrapper .github:hover .tooltip,
+        .wrapper .github:hover .tooltip::before {
+            background: #da3232;
+            color: aliceblue;
+        }
+
+        .wrapper .Patreon:hover,
+        .wrapper .Patreon:hover .tooltip,
+        .wrapper .Patreon:hover .tooltip::before {
+            background: #f96854;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <img src="../img/logo.png" alt="">
+                <span>Lesics</span>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto " href="../index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="../index.html">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="getstarted scrollto" href="https://www.patreon.com/Lesics">Support Us</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../civil-engineering.html">Civil Engineering</a></li>
+                    <li>Golden Gate Bridge</li>
+                </ol>
+                <h2>Golden gate bridge : Challenges and innovation</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- ======= Blog Single Section ======= -->
+        <section id="blog" class="blog">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-8 entries">
+
+                        <article class="entry entry-single">
+
+                            <div class="entry-img">
+                                <img src="img/blog/blog-1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <article id="full-article">
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">Golden gate bridge : Challenges and innovation</a>
+                                </h2>
+
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                                                href="blog-single.html">Sabin Mathew</a></li>
+                                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                                href="blog-single.html"><time datetime="2020-01-01">Oct 17,
+                                                    2022</time></a>
+                                        </li>
+                                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                                href="blog-single.html">12 Comments</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="entry-content">
+                                    <p>
+                                        No matter where you live, chances are high that you've heard of the name of
+                                        Golden
+                                        Gate Bridge. The Golden Gate Bridge floating over the Pacific ocean is one of
+                                        the
+                                        longest and tallest suspension bridge in the world.
+
+                                        Your eyes may be drawn to its beautiful suspension cable system. What would
+                                        happen
+                                        to the bridge if the cable system was not present? In short, it would be a
+                                        catastrophe(refer fig 1a & fig 1b).
+
+                                        In this article we will explore physics behind suspension bridges & the
+                                        mesmerizing
+                                        engineering facts of the Golden gate bridge. So let's start with its main cable.
+                                    </p>
+                                    <img src="../img/blog/Golden-Gate-Bridge/Bridge with cable.jpg" class="img-fluid"
+                                        alt="">
+
+                                    <p>
+                                        Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi
+                                        in
+                                        accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et
+                                        voluptate
+                                        cupiditate.
+                                    </p>
+
+                                    <blockquote>
+                                        <p>
+                                            Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi
+                                            aut.
+                                            Aut eos aliquam doloribus minus autem quos.
+                                        </p>
+                                    </blockquote>
+
+                                    <p>
+                                        Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore
+                                        tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores
+                                        nihil
+                                        magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores
+                                        nihil
+                                        quaerat.
+                                        Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti
+                                        velit quisquam rerum. Omnis dolorum exercitationem harum qui qui blanditiis
+                                        neque.
+                                        Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto
+                                        voluptatem magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
+                                    </p>
+
+                                    <h3>Et quae iure vel ut odit alias.</h3>
+                                    <p>
+                                        Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit
+                                        ut
+                                        rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae
+                                        qui.
+                                        Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum
+                                        est
+                                        libero eum nesciunt aliquid qui.
+                                        Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus
+                                        quia
+                                        aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
+                                        Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed.
+                                        Quibusdam
+                                        rerum dolores sint consequatur quidem ea.
+                                        Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit
+                                        voluptatem.
+                                        Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                                    </p>
+                                    <img src="../img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
+
+                                    <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+                                    <p>
+                                        Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum.
+                                        In
+                                        assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut
+                                        porro
+                                        autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore.
+                                        Autem facilis hic dolorum dolores vel.
+                                        Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo
+                                        omnis
+                                        quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis
+                                        numquam
+                                        ut illum ut a quam vitae.
+                                    </p>
+                                    <p>
+                                        Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa
+                                        voluptas
+                                        incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
+                                    </p>
+
+                                </div>
+                            </article>
+                            <div class="entry-footer">
+                                <i class="bi bi-folder"></i>
+                                <ul class="cats">
+                                    <li><a href="#">Civil Engineering</a></li>
+                                </ul>
+
+                                <i class="bi bi-tags"></i>
+                                <ul class="tags">
+                                    <li><a href="#">Creative</a></li>
+                                    <li><a href="#">Tips</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                </ul>
+
+                                <button id="read-article-button">Listen Full Article</button>
+
+                                <button id="stop-button">Stop Listening</button>
+                            </div>
+                            <div class="share-icons">
+                                <p>Share this Article on Social media</p>
+
+                                <ul class="wrapper">
+                                    <a href="javascript:void(0);" onclick="shareOnFacebook()" target="_blank">
+                                        <li class="icon facebook">
+                                            <span class="tooltip">Facebook</span>
+                                            <span><i class="fab fa-facebook"></i></span>
+                                        </li>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <li class="icon Patreon">
+                                            <span class="tooltip">Patreon</span>
+                                            <span><i class="fab fa-patreon"></i></span>
+                                        </li>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <li class="icon linkedin">
+                                            <span class="tooltip">LinkedIn</span>
+                                            <span><i class="fab fa-linkedin"></i></span>
+                                        </li>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <li class="icon whatsapp">
+                                            <span class="tooltip">whatsapp</span>
+                                            <span><i class="fab fa-whatsapp"></i></span>
+                                        </li>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <li class="icon instagram">
+                                            <span class="tooltip">Instagram</span>
+                                            <span><i class="fab fa-instagram"></i></span>
+                                        </li>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <li class="icon twitter">
+                                            <span class="tooltip">Twitter</span>
+                                            <span><i class="fab fa-twitter"></i></span>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </article>
+
+                        <div class="blog-author d-flex align-items-center">
+                            <img src="../img/blog/Sabin-Mathew.jpg" class="rounded-circle float-left" alt="">
+                            <div>
+                                <h4>Sabin Mathew</h4>
+                                <div class="social-links">
+                                    <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                                    <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                                </div>
+                                <p>
+                                    This article is written by Sabin Mathew, an IIT Delhi postgraduate in mechanical
+                                    engineering. Sabin is passionate about understanding the physics behind complex
+                                    technologies and explaining them in simple words. He is the founder of YouTube
+                                    channel 'LESICS', engineering educational platform. To know more about the author
+                                    check this link this link for more information about the author.
+                                </p>
+                            </div>
+                        </div><!-- End blog author bio -->
+
+                        <div class="blog-comments">
+
+                            <h4 class="comments-count">8 Comments</h4>
+
+                            <div id="comment-1" class="comment">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img src="../img/blog/comments-1.jpg" alt=""></div>
+                                    <div>
+                                        <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i
+                                                    class="bi bi-reply-fill"></i> Reply</a></h5>
+                                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                                        <p>
+                                            Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad
+                                            aut sapiente quis molestiae est qui cum soluta.
+                                            Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis
+                                            et.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End comment #1 -->
+
+                            <div id="comment-2" class="comment">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img src="../img/blog/comments-2.jpg" alt=""></div>
+                                    <div>
+                                        <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i
+                                                    class="bi bi-reply-fill"></i> Reply</a></h5>
+                                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                                        <p>
+                                            Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet
+                                            saepe. Officiis illo ut beatae.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div id="comment-reply-1" class="comment comment-reply">
+                                    <div class="d-flex">
+                                        <div class="comment-img"><img src="../img/blog/comments-3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i
+                                                        class="bi bi-reply-fill"></i> Reply</a></h5>
+                                            <time datetime="2020-01-01">01 Jan, 2020</time>
+                                            <p>
+                                                Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam
+                                                aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed
+                                                necessitatibus aut est. Eum officiis sed repellat maxime vero nisi
+                                                natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                                                Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in
+                                                porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi.
+                                                Pariatur distinctio labore omnis incidunt et illum. Expedita et
+                                                dignissimos distinctio laborum minima fugiat.
+
+                                                Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis
+                                                error dolorum non autem quisquam vero rerum neque.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div id="comment-reply-2" class="comment comment-reply">
+                                        <div class="d-flex">
+                                            <div class="comment-img"><img src="../img/blog/comments-4.jpg" alt="">
+                                            </div>
+                                            <div>
+                                                <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i
+                                                            class="bi bi-reply-fill"></i> Reply</a></h5>
+                                                <time datetime="2020-01-01">01 Jan, 2020</time>
+                                                <p>
+                                                    Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia
+                                                    dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam.
+                                                    Placeat porro est commodi est officiis voluptas repellat quisquam
+                                                    possimus. Perferendis id consectetur necessitatibus.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- End comment reply #2-->
+
+                                </div><!-- End comment reply #1-->
+
+                            </div><!-- End comment #2-->
+
+                            <div id="comment-3" class="comment">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img src="../img/blog/comments-5.jpg" alt=""></div>
+                                    <div>
+                                        <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i
+                                                    class="bi bi-reply-fill"></i> Reply</a></h5>
+                                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                                        <p>
+                                            Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus
+                                            quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem
+                                            aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                                            Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea
+                                            est consequuntur officia beatae ea aut eos soluta. Non qui dolorum
+                                            voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div><!-- End comment #3 -->
+
+                            <div id="comment-4" class="comment">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img src="../img/blog/comments-6.jpg" alt=""></div>
+                                    <div>
+                                        <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i
+                                                    class="bi bi-reply-fill"></i> Reply</a></h5>
+                                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                                        <p>
+                                            Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit
+                                            tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in
+                                            fugiat.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div><!-- End comment #4 -->
+
+                            <div class="reply-form">
+                                <h4>Leave a Reply</h4>
+                                <p>Your email address will not be published. Required fields are marked * </p>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <input name="name" type="text" class="form-control"
+                                                placeholder="Your Name*">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <input name="email" type="text" class="form-control"
+                                                placeholder="Your Email*">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <input name="website" type="text" class="form-control"
+                                                placeholder="Your Website">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <textarea name="comment" class="form-control"
+                                                placeholder="Your Comment*"></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                                </form>
+
+                            </div>
+
+                        </div><!-- End blog comments -->
+
+                    </div><!-- End blog entries list -->
+
+                    <div class="col-lg-4">
+
+                        <div class="sidebar">
+
+                            <h3 class="sidebar-title">Search</h3>
+                            <div class="sidebar-item search-form">
+                                <form action="">
+                                    <input type="text">
+                                    <button type="submit"><i class="bi bi-search"></i></button>
+                                </form>
+                            </div><!-- End sidebar search formn-->
+
+                            <h3 class="sidebar-title">Categories</h3>
+                            <div class="sidebar-item categories">
+                                <ul>
+                                    <li><a href="#">Automobile <span>(25)</span></a></li>
+                                    <li><a href="#">Electronics <span>(12)</span></a></li>
+                                    <li><a href="#">Electrical Machines <span>(5)</span></a></li>
+                                    <li><a href="#">Energy <span>(22)</span></a></li>
+                                    <li><a href="#">Mechanical Design <span>(8)</span></a></li>
+                                    <li><a href="#">Aerospace <span>(14)</span></a></li>
+                                    <li><a href="#">Telecommunication <span>(8)</span></a></li>
+                                    <li><a href="#">Civil Engineering <span>(14)</span></a></li>
+                                </ul>
+                            </div><!-- End sidebar categories-->
+
+                            <h3 class="sidebar-title">Recent Posts</h3>
+                            <div class="sidebar-item recent-posts">
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-1.jpg" alt="">
+                                    <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-2.jpg" alt="">
+                                    <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-3.jpg" alt="">
+                                    <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a>
+                                    </h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-4.jpg" alt="">
+                                    <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-5.jpg" alt="">
+                                    <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
+
+                            </div><!-- End sidebar recent posts-->
+
+                            <h3 class="sidebar-title">Tags</h3>
+                            <div class="sidebar-item tags">
+                                <ul>
+                                    <li><a href="#">App</a></li>
+                                    <li><a href="#">IT</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Mac</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Office</a></li>
+                                    <li><a href="#">Creative</a></li>
+                                    <li><a href="#">Studio</a></li>
+                                    <li><a href="#">Smart</a></li>
+                                    <li><a href="#">Tips</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                </ul>
+                            </div><!-- End sidebar tags-->
+
+                        </div><!-- End sidebar -->
+
+                    </div><!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+        </section><!-- End Blog Single Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-5 col-md-12 footer-info">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <img src="../img/logo.png" alt="">
+                            <span>Lesics</span>
+                        </a>
+                        <p>Lesics was founded by Sabin Mathew, an IIT Delhi post graduate in 2012. At Lesics, we aim to
+                            provide quality engineering education. Follow us on &#8595;</p>
+                        <!-- <div class="social-links mt-3">
+                            <a href="#" class="linkedin"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                            
+                        </div> -->
+                        <div class="share-icons">
+                            <!-- <p>Follow Us On</p> -->
+
+                            <ul class="wrapper">
+                                <a href="javascript:void(0);" onclick="shareOnFacebook()" target="_blank">
+                                    <li class="icon facebook">
+                                        <span class="tooltip">Facebook</span>
+                                        <span><i class="fab fa-facebook"></i></span>
+                                    </li>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <li class="icon youtube">
+                                        <span class="tooltip">YouTube</span>
+                                        <span><i class="fab fa-youtube"></i></span>
+                                    </li>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <li class="icon Patreon">
+                                        <span class="tooltip">Patreon</span>
+                                        <span><i class="fab fa-patreon"></i></span>
+                                    </li>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <li class="icon linkedin">
+                                        <span class="tooltip">LinkedIn</span>
+                                        <span><i class="fab fa-linkedin"></i></span>
+                                    </li>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <li class="icon whatsapp">
+                                        <span class="tooltip">whatsapp</span>
+                                        <span><i class="fab fa-whatsapp"></i></span>
+                                    </li>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <li class="icon instagram">
+                                        <span class="tooltip">Instagram</span>
+                                        <span><i class="fab fa-instagram"></i></span>
+                                    </li>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <li class="icon twitter">
+                                        <span class="tooltip">Twitter</span>
+                                        <span><i class="fab fa-twitter"></i></span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Office No 324, 3rd Floor, <br>
+                            Amanora Chambers, Hadapsar,<br>
+                            Pune, India. 411028. <br><br>
+                            <strong>Phone:</strong> +20 4128 3977 <br>
+                            <strong>Email:</strong> info@lesics.com<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Lesics</span></strong> | All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+                Designed by <a href="https://www.lesics.com/">Lesics</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../vendor/aos/aos.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../js/main.js"></script>
+
+    <script>
+        // Check for browser support
+        if ('speechSynthesis' in window) {
+            const readArticleButton = document.getElementById('read-article-button');
+            const stopButton = document.getElementById('stop-button');
+            const fullArticle = document.getElementById('full-article');
+            const synth = window.speechSynthesis;
+            let currentUtterance = null;
+
+            readArticleButton.addEventListener('click', () => {
+                const articleText = fullArticle.textContent;
+                if (articleText !== '') {
+                    // Stop any ongoing speech
+                    if (currentUtterance) {
+                        synth.cancel();
+                    }
+                    currentUtterance = new SpeechSynthesisUtterance(articleText);
+                    synth.speak(currentUtterance);
+                }
+            });
+
+            stopButton.addEventListener('click', () => {
+                // Stop the current speech
+                if (currentUtterance) {
+                    synth.cancel();
+                    currentUtterance = null;
+                }
+            });
+        } else {
+            // Browser doesn't support the Web Speech API
+            alert('Sorry, your browser does not support text-to-speech.');
+        }
+    </script>
+
+    <script>
+        const websiteURL = 'https://example.com'; // Replace with your website URL
+
+        function shareOnTwitter() {
+            window.open('https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20website:&url=' + encodeURIComponent(websiteURL), '_blank');
+        }
+
+        function shareOnFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(websiteURL), '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(websiteURL), '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            window.open('https://api.whatsapp.com/send?text=Check%20out%20this%20awesome%20website:%20' + encodeURIComponent(websiteURL));
+        }
+    </script>
+
+
+</body>
+
+</html>
